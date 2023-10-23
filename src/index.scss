@@ -21,17 +21,42 @@
     flex-grow: 1;
   }
   .header{
-    @apply flex justify-between p-4 bg-blue-400 shadow-md
+    @apply flex justify-between p-4 bg-blue-300 shadow-md
   }
  .navbar {
     @apply flex gap-4
  }
 
 .main{
-    @apply grow p-4 flex justify-center items-center p-4
+  @apply grow p-8
 }
 
 .footer{
 
     @apply flex justify-center items-center p-4 bg-blue-400 text-sm
+}
+
+.btn{
+  @apply px-4 py-2 rounded-md shadow-md bg-orange-200;
+}
+
+.form-input{
+  @apply px-4 py-2 rounded-md shadow-md bg-orange-200;
+}
+
+.card-container {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8;
+}
+
+.card {
+
+  @apply p-2 shadow-md space-y-8 rounded-sm hover:scale-105 transition-all;
+
+  &__title {
+      @apply text-xl font-bold overflow-hidden whitespace-nowrap overflow-ellipsis;
+  }
+
+  &__image {
+      @apply h-[150px] object-contain w-full;
+  }
 }
