@@ -2,11 +2,8 @@ import { useState } from "react"
 
 function Contador(props) {
 
-
-    const [contador,setContador] = useState (props.inicial)
+    const [contador,setContador] = useState(props.initial)
     
-
-
     const handleSumar = () => {
         setContador(contador + 1)
     }
@@ -15,23 +12,26 @@ function Contador(props) {
         if(contador > 1){
             setContador(contador - 1)
         }
-        
     }
 
     const handleResetear = () => {
         setContador(1)
     }
 
+    const handleConfirmar = () => {
+        props.onAdd(contador)
+    }
 
 
-
-    return(
+    return (
         <div>
             <p>Contador Actual : {contador}</p>
-            <button onClick={handleSumar} className="btn">Sumar</button>
-            <button onClick={handleRestar} className="btn">Restar</button>
-            <button onClick={handleResetear} className="btn">Resetear</button>
+            <button onClick={handleSumar} className="btn">sumar</button>
+            <button onClick={handleRestar} className="btn">restar</button>
+            <button onClick={handleResetear} className="btn">resetear</button>
+            <button onClick={handleConfirmar} className="btn">confirmar cantidad</button>
         </div>
     )
 }
+
 export default Contador

@@ -1,38 +1,22 @@
-import Header from "./components/Header.jsx"
-import Main from "./components/Main.jsx"
-import Footer from "./components/Footer.jsx"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import { BrowserRouter } from "react-router-dom"
+import { Toaster } from "sonner"
+import Footer from "./components/Footer"
+import Header from "./components/Header"
+import Main from "./components/Main"
+import CustomProvider from "./providers/CustomProvider"
 
 
 const App = () => {
 
-
   return (
-    <>
-    <Header />
-    
-    <Main/>
-    
-    
-    
-    <Footer/>
-    
-    
-    
-    </>
+    <BrowserRouter>
+      <CustomProvider>
+        <Header />
+        <Main />
+        <Footer />
+      </CustomProvider>
+      <Toaster position="bottom-right" />
+    </BrowserRouter>
   )
 }
 

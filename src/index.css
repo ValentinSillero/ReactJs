@@ -1,15 +1,19 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-*{
-  padding: 0%;
-  margin: 0%;
+* {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  }
+}
 
-html, body, #root {
+
+html,
+body,
+#root {
   height: 100%;
 }
 
-#root{
+#root {
   display: flex;
   flex-direction: column;
 }
@@ -18,6 +22,10 @@ main {
   flex-grow: 1;
 }
 
-header{
+.header-34 {
   background-color: red;
+}
+
+.header-35 {
+  background-color: rgb(161, 0, 0)
 }

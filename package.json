@@ -10,12 +10,23 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@testing-library/user-event": "^14.5.1",
+    "bootstrap": "^5.3.2",
+    "dotenv": "^16.3.1",
+    "firebase": "^10.5.2",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.17.0",
-    "sass": "^1.68.0"
+    "react-icons": "^4.11.0",
+    "react-router-dom": "^6.18.0",
+    "react-scripts": "^5.0.1",
+    "sass": "^1.68.0",
+    "sonner": "^1.2.0",
+    "web-vitals": "^3.5.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.1.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.3",

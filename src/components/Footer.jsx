@@ -1,8 +1,9 @@
-const Footer = () => {
+function Footer() {
+
     return (
-    <footer className="footer">
-        <p>MEJORA TU RENDIMIENTO DEPORTIVO</p>
-    </footer>
+        <footer className="footer">
+            <p>La Bomba</p>
+        </footer >
     )
 }
 

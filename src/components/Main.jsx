@@ -1,30 +1,22 @@
-import Contador from "./Contador"
-import Formulario from "./Formulario"
-import Container from "./Container"
-import { useState } from "react"
+import { Route, Routes } from "react-router-dom"
+import Carrito from "../pages/Carrito"
+import ItemDetailContainer from "../pages/ItemDetailContainer"
+import ProductListContainer from "../pages/ProductListContainer"
 
 const Main = () => {
 
-    const [toggle, setToggle] = useState(false)
-
-    const handleToggle = () => {
-        setToggle(!toggle)
-    }
-
     return (
-        <main className="main">
-            <button onClick={handleToggle}>{toggle ? "ir a contador" : "ir a productos"}</button>
-            {toggle 
-            ? <Container/> 
-            : (
-            <>
-                <Contador/>
-                <Formulario/>
-            </>
-            )}
+        <main className="main container mx-auto">
+            <Routes>
+                <Route path="/" element={<ProductListContainer />} />
+                <Route path="/clothing" element={<ProductListContainer />} />
+                <Route path="/electronics" element={<ProductListContainer />} />
+                <Route path="/cart" element={<Carrito />} />
+                <Route path="/detalle/:id" element={<ItemDetailContainer />} />
+                <Route path="*" element={<p>404 vuelva a intenta por favor</p>} />
+            </Routes>
         </main>
     )
-
 
 }
 
